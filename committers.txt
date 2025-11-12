@@ -1,10 +1,10 @@
-Testing by changing the GIT_COMMITTER_NAME env vars
+Testing by changing the GIT_COMMITTER_NAME env var
  - export GIT_COMMITTER_NAME="Spoof Name"
  - git commit -m "only spoofed name env var"
  - FAIL --> I still show up as committer and green verified pill still present
 
 
-Testing by changing the GIT_COMMITTER_EMAIL env vars
+Testing by changing the GIT_COMMITTER_EMAIL env var
  - export GIT_COMMITTER_EMAIL="spoofemail@asdfasdfasdfasdf.com"
  - git commit -m "only spoofed email env var"
  - SUCCESS --> my account shown as author, and just my name (with grey pfp) set at committer
@@ -22,3 +22,5 @@ Testing setting Max as Committer via env vars
  - export GIT_COMMITTER_NAME="Max Fusco"
  - export GIT_COMMITTER_EMAIL="max.fusco@datadoghq.com"
  - git commit -m "impersonate max via both env vars"
+ - SUCCESS --> my account shown as author, and Max's account shown as committer
+ - NOTE: "Unverified" Orange Pill
