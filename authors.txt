@@ -13,7 +13,7 @@ Testing Max and Jason as authors 1+2
 
 Testing Max and Jaosn as co-authors via commit message
  - git commit -m "bland\n\nCo-authored-by: Max Fusco <max.fusco@datadoghq.com>\nCo-authored-by: Jason Brown <jasongbrown7@gmail.com>"
- - SUCCESS --> but all three of us marked as committers
+ - success? --> all three of us marked as committers, not authors
 
 
 Testing Max as author flag but wrong name
@@ -31,6 +31,6 @@ Testing passing myself as author flag
 
 Testing Co-authors, with myself as one of them
 - git commit -m "foo\n\nCo-authored-by: Max Fusco <max.fusco@datadoghq.com>\nCo-authored-by: Tyler Reinecke <tyler.reinecke@datadoghq.com>"
-- 
+- fail? --> Put myself AND Max as committers, not authors
 
  NOTE: all commits had "Verified" green pill
