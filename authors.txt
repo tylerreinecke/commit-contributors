@@ -1,1 +1,2 @@
 foo --> testing Max as author 1
+foo2 --> testing Max and Jason as authors 1+2
