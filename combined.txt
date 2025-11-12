@@ -1,0 +1,4 @@
+Testing by spoofing both author and committer
+ - export GIT_COMMITTER_NAME="Max Fusco"
+ - export GIT_COMMITTER_EMAIL="max.fusco@datadoghq.com"
+ - git commit -m "impersonate max via both env vars and set him as author" --author="Max Fusco <max.fusco@datadoghq.com>"
