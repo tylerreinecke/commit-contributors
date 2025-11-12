@@ -24,3 +24,5 @@ Testing Max as author flag but wrong name
 Testing Max as author flag but wrong email
  - git commit -m "wrong author email" --author="Max Fusco <max.asdfasdf@datadoghq.com>" 
  - success? --> author was just a greyed out pfp with string "Max Fusco"
+
+ NOTE: all commits had "Verified" green pill
