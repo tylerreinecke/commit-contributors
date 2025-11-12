@@ -1,3 +1,10 @@
-Testing by changing the GIT_COMMITTER_NAME and GIT_COMMITTER_EMAIL env vars
+Testing by changing the GIT_COMMITTER_NAME env vars
  - export GIT_COMMITTER_NAME="Spoof Name"
  - git commit -m "only spoofed name env var"
+ - FAIL --> I still show up as committer and green verified pill still present
+
+
+ Testing by changing the GIT_COMMITTER_EMAIL env vars
+ - export GIT_COMMITTER_EMAIL="spoofemail@asdfasdfasdfasdf.com"
+ - git commit -m "only spoofed email env var"
+ - 
