@@ -2,3 +2,4 @@ foo --> testing Max as author 1
 foo2 --> testing Max and Jason as authors 1+2
 foo3 --> testing Max and Jaosn as co-authors via commit message
 foo4 --> testing Max as author flag but wrong name
+foo5 --> testing Max as author flag but wrong email
