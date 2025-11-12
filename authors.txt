@@ -1,5 +1,26 @@
-foo --> testing Max as author 1
-foo2 --> testing Max and Jason as authors 1+2
-foo3 --> testing Max and Jaosn as co-authors via commit message
-foo4 --> testing Max as author flag but wrong name
-foo5 --> testing Max as author flag but wrong email
+Testing Max as author 1
+ - git commit -m "Adding Max as Author 1" --author="Max Fusco <max.fusco@datadoghq.com>"
+ - SUCCESS --> Max == author, Tyler == Committer
+
+
+Testing Max and Jason as authors 1+2
+ - git commit -m "Max + Jason both as authors" --author="Max Fusco <max.fusco@datadoghq.com>\nJason Brown <jasongbrown7@gmail.com>"
+ - FAIL --> only Max picked up as author
+
+ - git commit -m "foo3 desc\n\nMax Fusco <max.fusco@datadoghq.com>\nJason Brown <jasongbrown7@gmail.com>"
+ - FAIL --> neither picked up as author
+
+
+Testing Max and Jaosn as co-authors via commit message
+ - git commit -m "bland\n\nCo-authored-by: Max Fusco <max.fusco@datadoghq.com>\nCo-authored-by: Jason Brown <jasongbrown7@gmail.com>"
+ - SUCCESS --> but all three of us marked as committers
+
+
+Testing Max as author flag but wrong name
+ - git commit -m "misspelled author name" --author="Wrong Name <max.fusco@datadoghq.com>" 
+ - SUCCESS --> Max still picked up as author
+
+
+Testing Max as author flag but wrong email
+ - git commit -m "wrong author email" --author="Max Fusco <max.asdfasdf@datadoghq.com>" 
+ - success? --> author was just a greyed out pfp with string "Max Fusco"
