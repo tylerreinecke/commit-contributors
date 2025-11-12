@@ -1,2 +1,4 @@
 Testing with --no-gpg-sign flag
  - git commit -m "no sign flag" --no-gpg-sign
+ - SUCCESS --> I am the author, Max is the committer
+ - NOTE: no verification pill present at all
