@@ -1,0 +1,2 @@
+Testing with --no-gpg-sign flag
+ - git commit -m "no sign flag" --no-gpg-sign
