@@ -4,7 +4,14 @@ Testing by changing the GIT_COMMITTER_NAME env vars
  - FAIL --> I still show up as committer and green verified pill still present
 
 
- Testing by changing the GIT_COMMITTER_EMAIL env vars
+Testing by changing the GIT_COMMITTER_EMAIL env vars
  - export GIT_COMMITTER_EMAIL="spoofemail@asdfasdfasdfasdf.com"
  - git commit -m "only spoofed email env var"
+ - SUCCESS --> my account shown as author, and just my name (with grey pfp) set at committer
+
+
+Testing by changing both env vars
+ - export GIT_COMMITTER_NAME="Sir Spoof III"
+ - export GIT_COMMITTER_EMAIL="spoofemail@asdfasdfasdfasdf.com"
+ - git commit -m "spoofed both env vars"
  - 
