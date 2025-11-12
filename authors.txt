@@ -27,5 +27,10 @@ Testing Max as author flag but wrong email
 
 Testing passing myself as author flag
  - git commit -m "myself via author flag" --author="Tyler Reinecke <tyler.reinecke@datadoghq.com>"
+ - FAIL --> I am only marked as committer, not separate entries for author and committer
+
+Testing Co-authors, with myself as one of them
+- git commit -m "foo\n\nCo-authored-by: Max Fusco <max.fusco@datadoghq.com>\nCo-authored-by: Tyler Reinecke <tyler.reinecke@datadoghq.com>"
+- 
 
  NOTE: all commits had "Verified" green pill
