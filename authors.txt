@@ -33,4 +33,7 @@ Testing Co-authors, with myself as one of them
 - git commit -m "foo\n\nCo-authored-by: Max Fusco <max.fusco@datadoghq.com>\nCo-authored-by: Tyler Reinecke <tyler.reinecke@datadoghq.com>"
 - fail? --> Put myself AND Max as committers, not authors
 
+Testing adding Linus Torvalds as a contributor
+ - git commit -m "gimme dat Linus clout" --author="Linus Torvalds <torvalds@linux-foundation.org>"
+
  NOTE: all commits had "Verified" green pill
